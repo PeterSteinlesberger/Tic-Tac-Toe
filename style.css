@@ -10,7 +10,7 @@ td {
     cursor: pointer;
 }
 td:hover {
-    background-color: rgb(185, 249, 251);
+    background-color: rgb(185, 249, 251, 0.5);
 }
   tr:first-child td {
     border-top: 0;
