@@ -68,7 +68,7 @@ td:hover {
 
   .player-inactive {
       color: rgb(199, 6, 6);
-      opacity: 0.5;
+      opacity: 0.3;
   }
   .line {
       position: absolute;
@@ -82,3 +82,35 @@ td:hover {
       transform: rotate(90deg) scaleX(0.0);
       top: 491px;
   }
+.restart-btn {
+    position: absolute;
+    width: 500px;
+    height: 120px;
+    font-size: 30px;
+    background-color: rgb(11, 115, 212);
+    color: white;
+    top: 434px;
+    opacity: 0.8;
+    border-radius: 17px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 42px;
+    animation: zoomIn 2500ms ease-in-out;
+}
+
+@keyframes zoomIn {
+from {
+    transform: scaleY(0);
+    opacity: 0;
+}
+to {
+    transform: scale(1);
+    opacity: 0.8;
+}
+}
+
+.restart-btn:hover {
+    cursor: pointer;
+    background-color: rgb(112, 185, 2);
+    color: rgb(65, 58, 58);
+    opacity: 1;
+}
