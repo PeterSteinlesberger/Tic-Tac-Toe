@@ -72,11 +72,13 @@ td:hover {
   }
   .line {
       position: absolute;
-      height: 5px;
+      height: 6px;
       background-color: rgba(0, 0, 0, 0.5);
       width: 285px;
+      transform: scaleX(0.0);
+      transition: transform 350ms ease-in-out;
   }
   .make-vertikal {
-      transform: rotate(90deg);
+      transform: rotate(90deg) scaleX(0.0);
       top: 491px;
   }
