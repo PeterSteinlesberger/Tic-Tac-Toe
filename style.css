@@ -1,3 +1,12 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 tr {
     width: 300px;
 }
@@ -10,7 +19,7 @@ td {
     cursor: pointer;
 }
 td:hover {
-    background-color: rgb(185, 249, 251, 0.5);
+    background-color: rgb(197, 153, 238);
 }
   tr:first-child td {
     border-top: 0;
@@ -36,4 +45,28 @@ td:hover {
   }
   .d-none {
       display: none;
+  }
+  .playerPanel {
+    margin-bottom: 100px;
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+
+  }
+  .playerPanel img {
+      height: 50px;
+      width: 50px;
+  }
+  .player-class {
+      font-size: 22px;
+      width: 150px;
+    color: rgb(0, 165, 8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .player-inactive {
+      color: rgb(199, 6, 6);
+      opacity: 0.5;
   }
