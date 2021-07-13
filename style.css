@@ -19,7 +19,7 @@ td {
     cursor: pointer;
 }
 td:hover {
-    background-color: rgb(197, 153, 238);
+    background-color: rgba(167, 248, 46, 0.5);
 }
   tr:first-child td {
     border-top: 0;
@@ -69,4 +69,14 @@ td:hover {
   .player-inactive {
       color: rgb(199, 6, 6);
       opacity: 0.5;
+  }
+  .line {
+      position: absolute;
+      height: 5px;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 285px;
+  }
+  .make-vertikal {
+      transform: rotate(90deg);
+      top: 491px;
   }
