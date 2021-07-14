@@ -1,7 +1,9 @@
 let fields = [];
 let currentImg = 'cross'
 let gameOver = false;
-let AUDIO_FILE = '';
+let AUDIO_FILE = new Audio('audio/rightAnswer.mp3');
+let AUDIO_WIN = new Audio('audio/shorthappysound.mp3');
+let counter = 0;
 
 function fillField(id) {
     if (!fields[id] && !gameOver) {
@@ -30,6 +32,8 @@ function draw() {
             document.getElementById('cross' + i).classList.remove('d-none');
         }
     }
+    counter++;
+   AUDIO_FILE.play();
 }
 
 function checkForWin() {
@@ -70,10 +74,21 @@ function checkForWin() {
 
     if (winner) {
         gameOver = true;
-
+        counter = 0;
         setTimeout(function () {
             document.getElementById('restartBtn').classList.remove('d-none');
         }, 4000);
+      AUDIO_WIN.play();
+    }
+    if(counter == 9) {
+        gameOver = true;
+        counter = 0;
+        document.getElementById('evenGame').classList.remove('d-none');
+        setTimeout(function () {
+            document.getElementById('evenGame').classList.add('d-none');
+            document.getElementById('restartBtn').classList.remove('d-none');
+        }, 4000);
+         AUDIO_WIN.play();
     }
 }
 
@@ -81,9 +96,10 @@ function newGame() {
     gameOver = false;
     fields = [];
     document.getElementById('restartBtn').classList.add('d-none');
+    document.getElementById('evenGame').classList.add('d-none');
     for (let i = 0; i < 8; i++) {
-        document.getElementById('line' + i).classList.add('d-none');
-    }
+        document.getElementById('line' + i).style.transform = 'scaleX(0)';
+        }
     for (let i = 0; i < 9; i++) {
         document.getElementById('cross' + i).classList.add('d-none');
         document.getElementById('circle' + i).classList.add('d-none');

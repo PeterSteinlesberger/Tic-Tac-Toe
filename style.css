@@ -95,6 +95,8 @@ td:hover {
     border: 1px solid rgba(0, 0, 0, 0.8);
     font-size: 42px;
     animation: zoomIn 2500ms ease-in-out;
+    text-align: center;
+   
 }
 
 @keyframes zoomIn {
@@ -110,7 +112,12 @@ to {
 
 .restart-btn:hover {
     cursor: pointer;
-    background-color: rgb(112, 185, 2);
+    background-color: rgb(132, 214, 8);
     color: rgb(65, 58, 58);
-    opacity: 1;
+    opacity: 0.8;
+}
+.text-center {
+  padding-top: 40px;
+ display: flex;
+ align-items: center;
 }
